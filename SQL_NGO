@@ -1,0 +1,22 @@
+CREATE DATABASE IF NOT EXISTS NGOManagement;
+
+USE NGOManagement;
+
+CREATE TABLE Donors (
+    DonorID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    Contact VARCHAR(255)
+);
+
+CREATE TABLE Resources (
+    ResourceID INT AUTO_INCREMENT PRIMARY KEY,
+    Name VARCHAR(255) NOT NULL,
+    Quantity INT NOT NULL
+);
+
+CREATE TABLE Distributions (
+    DistributionID INT AUTO_INCREMENT PRIMARY KEY,
+    ResourceName VARCHAR(255) NOT NULL,
+    Beneficiary VARCHAR(255) NOT NULL,
+    Quantity INT NOT NULL
+);
